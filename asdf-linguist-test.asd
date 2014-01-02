@@ -14,4 +14,5 @@
                   ((:module "css"
                     :components
                     ((:less "less-input")
-                     (:myth "myth-input")))))))))
+                     (:myth "myth-input")
+                     (:sass "sass-input")))))))))
