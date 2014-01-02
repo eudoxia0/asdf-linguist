@@ -14,9 +14,17 @@
                 :components
                 ((:module "css"
                   :components
-                  ((:file "less")
-                   (:file "myth")
-                   (:file "sass")))))
+                  ((:less "less")
+                   (:myth "myth")
+                   (:sass "sass")))
+                 (:module "tools"
+                  :components
+                  ((:file "yui")))
+                 (:module "js"
+                  :components
+                  ((:file "coffee")
+                   (:file "parenscript")
+                   (:file "roy")))))
                (:module "tools"
                 :components
                 ((:module "graphics"
