@@ -20,11 +20,11 @@ attempts to solve this by providing one and only one way to do these things.
     * [Sass](http://sass-lang.com/) ✓
   * Tools
     * CSS/JSS Minifiers
-      * [YUI Compressor](http://yui.github.io/yuicompressor/)
+      * [YUI Compressor](http://yui.github.io/yuicompressor/) ✓
   * Compile-to-Javascript
-    * [CoffeeScript](http://coffeescript.org/)
+    * [CoffeeScript](http://coffeescript.org/) ✓
     * [ParenScript](http://common-lisp.net/projects/parenscript/)
-    * [Roy](http://roy.brianmckenna.org/)
+    * [Roy](http://roy.brianmckenna.org/) ✓
 * Build systems
   * Make
   * CMake
