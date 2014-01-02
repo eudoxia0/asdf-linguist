@@ -34,7 +34,7 @@ attempts to solve this by providing one and only one way to do these things.
     * [pandoc](http://johnmacfarlane.net/pandoc/)
   * Graphics
     * [dot](http://www.graphviz.org/)
-    * [ditaa](http://ditaa.sourceforge.net/)
+    * [ditaa](http://ditaa.sourceforge.net/) ✓
 
 # License
 
