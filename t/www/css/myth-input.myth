@@ -1,0 +1,7 @@
+:root {
+  var-mycolor: #ddd;
+}
+
+body {
+  color: color(var(mycolor) tint(50%));
+}

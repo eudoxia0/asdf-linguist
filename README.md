@@ -17,7 +17,7 @@ attempts to solve this by providing one and only one way to do these things.
   * CSS preprocessors
     * [LESS](http://lesscss.org/) ✓
     * [Sass](http://sass-lang.com/)
-    * [Myth](http://www.myth.io/)
+    * [Myth](http://www.myth.io/) ✓
   * Tools
     * CSS/JSS Minifiers
       * [YUI Compressor](http://yui.github.io/yuicompressor/)

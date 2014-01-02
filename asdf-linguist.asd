@@ -14,7 +14,8 @@
                 :components
                 ((:module "css"
                   :components
-                  ((:file "less"))))))
+                  ((:file "less")
+                   (:file "myth"))))))
   :description ""
   :long-description
   #.(with-open-file (stream (merge-pathnames
