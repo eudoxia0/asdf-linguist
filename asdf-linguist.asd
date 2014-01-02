@@ -9,7 +9,7 @@
   :license "MIT"
   :depends-on (:asdf)
   :serial t
-  :components ((:file "package")
+  :components ((:file "base")
                (:module "www"
                 :components
                 ((:module "css"
