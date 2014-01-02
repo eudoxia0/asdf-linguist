@@ -15,4 +15,9 @@
                     :components
                     ((:less "less-input")
                      (:myth "myth-input")
-                     (:sass "sass-input")))))))))
+                     (:sass "sass-input")))))
+                 (:module "tools"
+                  :components
+                  ((:module "graphics"
+                    :components
+                    ((:ditaa "ditaa-input")))))))))

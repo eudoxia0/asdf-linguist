@@ -16,7 +16,12 @@
                   :components
                   ((:file "less")
                    (:file "myth")
-                   (:file "sass"))))))
+                   (:file "sass")))))
+               (:module "tools"
+                :components
+                ((:module "graphics"
+                  :components
+                  ((:file "ditaa"))))))
   :description ""
   :long-description
   #.(with-open-file (stream (merge-pathnames
