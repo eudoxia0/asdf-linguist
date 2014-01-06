@@ -23,4 +23,5 @@
                   :components
                   ((:module "graphics"
                     :components
-                    ((:ditaa "ditaa-input")))))))))
+                    ((:dot "dot-input")
+                     (:ditaa "ditaa-input")))))))))
