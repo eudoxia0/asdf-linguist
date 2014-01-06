@@ -26,7 +26,7 @@ attempts to solve this by providing one and only one way to do these things.
     * [ParenScript](http://common-lisp.net/projects/parenscript/)
     * [Roy](http://roy.brianmckenna.org/) ✓
 * Build systems
-  * Make
+  * Make ✓
   * CMake
 * Tools
   * Text Processing
