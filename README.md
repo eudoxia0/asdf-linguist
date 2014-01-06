@@ -33,7 +33,7 @@ attempts to solve this by providing one and only one way to do these things.
     * [org-mode](http://orgmode.org/)
     * [pandoc](http://johnmacfarlane.net/pandoc/)
   * Graphics
-    * [dot](http://www.graphviz.org/)
+    * [dot](http://www.graphviz.org/) ✓
     * [ditaa](http://ditaa.sourceforge.net/) ✓
 
 # License

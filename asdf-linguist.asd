@@ -32,7 +32,8 @@
                 :components
                 ((:module "graphics"
                   :components
-                  ((:file "ditaa"))))))
+                  ((:file "dot")
+                   (:file "ditaa"))))))
   :description ""
   :long-description
   #.(with-open-file (stream (merge-pathnames
