@@ -1,0 +1,4 @@
+default: msg
+
+msg:
+	ls
