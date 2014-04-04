@@ -10,6 +10,9 @@
   :depends-on (:asdf)
   :serial t
   :components ((:file "base")
+               (:module "lang"
+                :components
+                ((:file "c")))
                (:module "www"
                 :components
                 ((:module "css"
@@ -33,7 +36,10 @@
                 ((:module "graphics"
                   :components
                   ((:file "dot")
-                   (:file "ditaa"))))))
+                   (:file "ditaa")))
+                 (:module "text"
+                  :components
+                  ((:file "flex"))))))
   :description ""
   :long-description
   #.(with-open-file (stream (merge-pathnames
