@@ -7,7 +7,7 @@
     (print out)
     (run-shell-command out)))
 
-(defun out (component output-type &optional (name (pathname-name (component-pathname component))))
+(defun out (component &optional output-type (name (pathname-name (component-pathname component))))
   (make-pathname
    :name (if (slot-boundp component 'output) (output component) name)
    :type output-type
