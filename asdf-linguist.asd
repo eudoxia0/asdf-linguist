@@ -39,7 +39,8 @@
                    (:file "ditaa")))
                  (:module "text"
                   :components
-                  ((:file "flex"))))))
+                  ((:file "flex")
+                   (:file "pandoc"))))))
   :description ""
   :long-description
   #.(with-open-file (stream (merge-pathnames
