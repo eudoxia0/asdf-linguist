@@ -24,4 +24,10 @@
                   ((:module "graphics"
                     :components
                     ((:dot "dot-input")
-                     (:ditaa "ditaa-input")))))))))
+                     (:ditaa "ditaa-input")))
+                   (:module "text"
+                    :components
+                    ((:pandoc "test"
+                      :type "md"
+                      :output-type "html"
+                      :options "-S")))))))))
