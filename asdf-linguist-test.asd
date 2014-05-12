@@ -29,5 +29,7 @@
                     :components
                     ((:pandoc "test"
                       :type "md"
-                      :output-type "html"
+                      :input-type "markdown"
+                      :output-type "html5"
+                      :output-extension "html"
                       :options "-S")))))))))
