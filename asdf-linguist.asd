@@ -1,9 +1,4 @@
-(in-package :cl-user)
-(defpackage asdf-linguist-asd
-  (:use :cl :asdf))
-(in-package :asdf-linguist-asd)
-
-(defsystem asdf-linguist
+(asdf:defsystem asdf-linguist
   :version "0.1"
   :author "Fernando Borretti <eudoxiahp@gmail.com>"
   :license "MIT"
