@@ -5,7 +5,7 @@
    (output :reader output :initarg :output)
    (output-type :initform "png" :accessor output-type :initarg :type)))
 
-(defmethod perform ((o load-op) (component dot)) t)
+(defmethod perform ((o load-op) (component dot)) nil)
 
 (defmethod output-files ((operation compile-op) (component dot))
   (values

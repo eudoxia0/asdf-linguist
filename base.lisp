@@ -22,9 +22,8 @@
      (defmethod perform ((o load-op) (component ,name)) t)
 
      (defmethod output-files ((operation compile-op) (component ,name))
-       (values
-        (list
-         (out component ,output-type))))
+       (list
+        (out component ,output-type)))
 
      (defmethod perform ((o compile-op) (component ,name))
        (run ,command-format
