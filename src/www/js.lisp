@@ -2,7 +2,7 @@
 
 ;;; CoffeeScript
 
-(define-simple-component coffee
+(define-shell-component coffee
   :input-type "coffee"
   :output-type "js"
   :command-format "coffee -c ~A #~A")

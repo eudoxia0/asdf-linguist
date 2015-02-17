@@ -14,7 +14,8 @@
    :type output-type
    :defaults (component-pathname component)))
 
-(defmacro define-simple-component (name &key input-type output-type command-format)
+(defmacro define-component (name &key input-type output-type compile-function)
+  "Define an ASDF component."
   `(progn
      (defclass ,name (source-file)
        ((type :initform ,input-type)
@@ -27,8 +28,18 @@
         (out component ,output-type)))
 
      (defmethod perform ((o compile-op) (component ,name))
-       (run ,command-format
-            (namestring (component-pathname component))
-            (namestring (out component ,output-type))))
+       (funcall ,compile-function
+                (component-pathname component)
+                (out component ,output-type)))
 
      (import ',name :asdf)))
+
+(defmacro define-shell-component (name &key input-type output-type command-format)
+  "Define an ASDF component that's compiled by running a shell command."
+  `(define-component ,name
+     :input-type ,input-type
+     :output-type ,output-type
+     :compile-function (lambda (input-pathname output-pathname)
+                         (run ,command-format
+                              (namestring input-pathname)
+                              (namestring output-pathname)))))
