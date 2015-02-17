@@ -1,3 +1,3 @@
 (in-package :asdf-linguist)
 
-(simple roy "roy" "js" "roy ~A #~A")
+(simple roy "roy" "js" "roy -r ~A #~A")

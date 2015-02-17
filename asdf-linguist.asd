@@ -12,11 +12,7 @@
                   ((:file "c")))
                  (:module "www"
                   :components
-                  ((:module "css"
-                    :components
-                    ((:file "less")
-                     (:file "myth")
-                     (:file "sass")))
+                  ((:file "css")
                    (:module "tools"
                     :components
                     ((:file "yui")))
