@@ -8,6 +8,6 @@
 (defmethod perform ((o load-op) (component make)) t)
 
 (defmethod perform ((o compile-op) (component make))
-  (run "make -f ~A" (component-pathname component)))
+  (run-command "make -f ~A" (component-pathname component)))
 
 (import 'make :asdf)

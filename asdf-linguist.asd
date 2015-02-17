@@ -2,7 +2,8 @@
   :version "0.1"
   :author "Fernando Borretti <eudoxiahp@gmail.com>"
   :license "MIT"
-  :depends-on (:asdf)
+  :depends-on (:asdf
+               :parenscript)
   :components ((:module "src"
                 :serial t
                 :components
@@ -12,33 +13,15 @@
                   ((:file "c")))
                  (:module "www"
                   :components
-                  ((:module "css"
-                    :components
-                    ((:file "less")
-                     (:file "myth")
-                     (:file "sass")))
-                   (:module "tools"
-                    :components
-                    ((:file "yui")))
-                   (:module "js"
-                    :components
-                    ((:file "coffee")
-                     (:file "parenscript")
-                     (:file "roy")))))
+                  ((:file "css")
+                   (:file "js")
+                   (:file "tools")))
                  (:module "build-systems"
                   :components
                   ((:file "make")))
-                 (:module "tools"
-                  :components
-                  ((:module "graphics"
-                    :components
-                     ((:file "dot")
-                      (:file "ditaa")))
-                   (:module "text"
-                    :components
-                     ((:file "flex")
-                      (:file "pandoc"))))))))
-  :description ""
+                 (:file "graphics")
+                 (:file "text"))))
+  :description "Extensions for ASDF."
   :long-description
   #.(with-open-file (stream (merge-pathnames
                              #p"README.md"
