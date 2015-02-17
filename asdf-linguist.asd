@@ -3,39 +3,41 @@
   :author "Fernando Borretti <eudoxiahp@gmail.com>"
   :license "MIT"
   :depends-on (:asdf)
-  :serial t
-  :components ((:file "base")
-               (:module "lang"
+  :components ((:module "src"
+                :serial t
                 :components
-                ((:file "c")))
-               (:module "www"
-                :components
-                ((:module "css"
+                ((:file "base")
+                 (:module "lang"
                   :components
-                  ((:file "less")
-                   (:file "myth")
-                   (:file "sass")))
+                  ((:file "c")))
+                 (:module "www"
+                  :components
+                  ((:module "css"
+                    :components
+                    ((:file "less")
+                     (:file "myth")
+                     (:file "sass")))
+                   (:module "tools"
+                    :components
+                    ((:file "yui")))
+                   (:module "js"
+                    :components
+                    ((:file "coffee")
+                     (:file "parenscript")
+                     (:file "roy")))))
+                 (:module "build-systems"
+                  :components
+                  ((:file "make")))
                  (:module "tools"
                   :components
-                  ((:file "yui")))
-                 (:module "js"
-                  :components
-                  ((:file "coffee")
-                   (:file "parenscript")
-                   (:file "roy")))))
-               (:module "build-systems"
-                :components
-                ((:file "make")))
-               (:module "tools"
-                :components
-                ((:module "graphics"
-                  :components
-                  ((:file "dot")
-                   (:file "ditaa")))
-                 (:module "text"
-                  :components
-                  ((:file "flex")
-                   (:file "pandoc"))))))
+                  ((:module "graphics"
+                    :components
+                     ((:file "dot")
+                      (:file "ditaa")))
+                   (:module "text"
+                    :components
+                     ((:file "flex")
+                      (:file "pandoc"))))))))
   :description ""
   :long-description
   #.(with-open-file (stream (merge-pathnames

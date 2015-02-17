@@ -38,7 +38,7 @@ attempts to solve this by providing one and only one way to do these things.
 
 # License
 
-Copyright (c) 2014 Fernando Borretti <eudoxiahp@gmail.com>
+Copyright (c) 2014-2015 Fernando Borretti <eudoxiahp@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
