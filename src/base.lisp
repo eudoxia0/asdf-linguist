@@ -25,12 +25,12 @@
 
      (defmethod output-files ((operation compile-op) (component ,name))
        (list
-        (out component ,output-type)))
+        (output-pathname component ,output-type)))
 
      (defmethod perform ((o compile-op) (component ,name))
        (funcall ,compile-function
                 (component-pathname component)
-                (out component ,output-type)))
+                (output-pathname component ,output-type)))
 
      (import ',name :asdf)))
 
@@ -40,6 +40,6 @@
      :input-type ,input-type
      :output-type ,output-type
      :compile-function (lambda (input-pathname output-pathname)
-                         (run ,command-format
-                              (namestring input-pathname)
-                              (namestring output-pathname)))))
+                         (run-command ,command-format
+                                      (namestring input-pathname)
+                                      (namestring output-pathname)))))

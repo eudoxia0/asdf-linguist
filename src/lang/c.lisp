@@ -10,12 +10,12 @@
 (defmethod output-files ((operation compile-op) (component c->bin))
   (values
    (list
-    (out component))))
+    (output-pathname component))))
 
 (defmethod perform ((o compile-op) (component c->bin))
-  (run "cc ~A -o ~A ~{-l~A~}"
-       (namestring (component-pathname component))
-       (namestring (out component))
-       (link component)))
+  (run-command "cc ~A -o ~A ~{-l~A~}"
+               (namestring (component-pathname component))
+               (namestring (output-pathname component))
+               (link component)))
 
 (import 'c->bin :asdf)
