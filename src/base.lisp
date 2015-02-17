@@ -2,18 +2,19 @@
   (:use :cl :asdf))
 (in-package :asdf-linguist)
 
-(defun run (format-string &rest args)
+(defun run-command (format-string &rest args)
   (let ((out (apply #'format (cons nil (cons format-string args)))))
     (print out)
     (run-shell-command out)))
 
-(defun out (component &optional output-type (name (pathname-name (component-pathname component))))
+(defun output-pathname (component &optional output-type
+                                    (name (pathname-name (component-pathname component))))
   (make-pathname
    :name (if (slot-boundp component 'output) (output component) name)
    :type output-type
    :defaults (component-pathname component)))
 
-(defmacro simple (name input-type output-type command-format)
+(defmacro define-simple-component (name &key input-type output-type command-format)
   `(progn
      (defclass ,name (source-file)
        ((type :initform ,input-type)
