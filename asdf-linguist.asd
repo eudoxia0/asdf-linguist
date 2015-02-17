@@ -13,14 +13,10 @@
                  (:module "www"
                   :components
                   ((:file "css")
+                   (:file "js")
                    (:module "tools"
                     :components
-                    ((:file "yui")))
-                   (:module "js"
-                    :components
-                    ((:file "coffee")
-                     (:file "parenscript")
-                     (:file "roy")))))
+                    ((:file "yui")))))
                  (:module "build-systems"
                   :components
                   ((:file "make")))
