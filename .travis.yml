@@ -9,7 +9,9 @@ install:
   - curl https://raw.githubusercontent.com/luismbo/cl-travis/master/install.sh | bash
   # Install dependencies
   - gem install sass
-  - sudo apt-get install pandoc less yui-compressor make nodejs npm
+  - sudo apt-get install pandoc less yui-compressor make
+  - curl -sL https://deb.nodesource.com/setup | sudo bash -
+  - sudo apt-get install nodejs build-essential npm
   - sudo npm -g install myth roy
 
 script:
