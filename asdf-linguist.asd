@@ -22,7 +22,6 @@
                  (:file "graphics")
                  (:file "text"))))
   :description "Extensions for ASDF."
-  :long-description
   :long-description #.(uiop:read-file-string
                        (uiop:subpathname *load-pathname* "README.md"))
   :in-order-to ((test-op (load-op asdf-linguist-test))))
