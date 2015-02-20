@@ -1,3 +1,7 @@
+# asdf-linguist
+
+[![Build Status](https://travis-ci.org/eudoxia0/asdf-linguist.svg?branch=master)](https://travis-ci.org/eudoxia0/asdf-linguist)
+
 ASDF-linguist is a set of extensions to the ASDF build system for Common Lisp
 for compiling various languages and running various preprocessing tools (Sass,
 LESS, etc.) on files in your project.
