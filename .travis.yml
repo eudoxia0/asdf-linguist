@@ -16,6 +16,7 @@ install:
 
 script:
   - cl -e '(ql:quickload :fiveam)'
+       -e '(ql:quickload :parenscript)'
        -e '(setf fiveam:*debug-on-error* t
                  fiveam:*debug-on-failure* t)'
        -e '(setf *debugger-hook*
