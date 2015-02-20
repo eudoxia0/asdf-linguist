@@ -11,7 +11,7 @@ install:
   - gem install sass
   - sudo apt-get install pandoc less yui-compressor make
   - curl -sL https://deb.nodesource.com/setup | sudo bash -
-  - sudo apt-get install nodejs build-essential npm
+  - sudo apt-get install nodejs build-essential
   - sudo npm -g install myth roy
 
 script:
