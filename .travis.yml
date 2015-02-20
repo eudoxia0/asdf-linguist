@@ -10,7 +10,7 @@ install:
   # Install dependencies
   - gem install sass
   - sudo apt-get install pandoc less yui-compressor make nodejs npm
-  - sudo npm -g install myth roy coffee-script
+  - sudo npm -g install myth roy
 
 script:
   - cl -e '(ql:quickload :fiveam)'
