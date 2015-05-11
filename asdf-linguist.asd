@@ -20,7 +20,10 @@
                   :components
                   ((:file "make")))
                  (:file "graphics")
-                 (:file "text"))))
+                 (:module "text"
+                  :components
+                  ((:file "flex")
+                   (:file "pandoc"))))))
   :description "Extensions for ASDF."
   :long-description #.(uiop:read-file-string
                        (uiop:subpathname *load-pathname* "README.md"))
