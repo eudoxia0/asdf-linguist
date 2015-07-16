@@ -9,8 +9,13 @@
 
 ;;; Sass
 
-(define-shell-component sass
+(define-shell-component scss
   :input-type "scss"
+  :output-type "css"
+  :command-format "sass ~A ~A")
+
+(define-shell-component sass
+  :input-type "sass"
   :output-type "css"
   :command-format "sass ~A ~A")
 
