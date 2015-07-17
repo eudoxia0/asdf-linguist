@@ -5,7 +5,7 @@
 (define-shell-component coffee
   :input-type "coffee"
   :output-type "js"
-  :command-format "coffee -c ~A ~A")
+  :command-format "coffee -c ~A")
 
 ;;; Roy
 
