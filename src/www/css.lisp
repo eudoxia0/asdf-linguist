@@ -9,12 +9,12 @@
 
 ;;; Sass
 
-(define-shell-component scss
+(define-shell-component sass
   :input-type "scss"
   :output-type "css"
   :command-format "sass ~A ~A")
 
-(define-shell-component sass
+(define-shell-component sass-indent
   :input-type "sass"
   :output-type "css"
   :command-format "sass ~A ~A")
