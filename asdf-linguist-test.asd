@@ -16,7 +16,7 @@
                     ((:less "less-input")
                      (:myth "myth-input")
                      (:sass "sass-input")
-                     (:sass-indent "sass-indent-input")))))
+                     (:sass-strict "sass-strict-input")))))
                  (:module "build-systems"
                   :components
                   ((:make "Makefile")))
