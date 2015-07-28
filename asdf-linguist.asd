@@ -1,6 +1,7 @@
-(asdf:defsystem asdf-linguist
+(defsystem asdf-linguist
   :version "0.1"
-  :author "Fernando Borretti <eudoxiahp@gmail.com>"
+  :author "Fernando Borretti"
+  :mailto "eudoxiahp@gmail.com"
   :license "MIT"
   :depends-on (:asdf
                :inferior-shell
@@ -27,5 +28,5 @@
                    (:file "pandoc"))))))
   :description "Extensions for ASDF."
   :long-description #.(uiop:read-file-string
-                       (uiop:subpathname *load-pathname* "README.md"))
+                       (uiop:subpathname *load-truename* "README.md"))
   :in-order-to ((test-op (load-op asdf-linguist-test))))

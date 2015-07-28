@@ -2,11 +2,6 @@
   (:use :cl :asdf))
 (in-package :asdf-linguist)
 
-(defun run-command (format-string &rest args)
-  (let ((out (apply #'format (cons nil (cons format-string args)))))
-    (print out)
-    (inferior-shell:run out)))
-
 (defun output-pathname (component &optional output-type
                                     (name (pathname-name (component-pathname component))))
   (make-pathname
@@ -34,12 +29,13 @@
 
      (import ',name :asdf)))
 
-(defmacro define-shell-component (name &key input-type output-type command-format)
+(defmacro define-shell-component (name &key input-type output-type shell-command)
   "Define an ASDF component that's compiled by running a shell command."
   `(define-component ,name
      :input-type ,input-type
      :output-type ,output-type
      :compile-function (lambda (input-pathname output-pathname)
-                         (run-command ,command-format
-                                      (namestring input-pathname)
-                                      (namestring output-pathname)))))
+                         (inferior-shell:run (list ,shell-command
+                                                    input-pathname
+                                                    output-pathname)
+                                             :show t))))
