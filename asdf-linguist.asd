@@ -27,5 +27,5 @@
                    (:file "pandoc"))))))
   :description "Extensions for ASDF."
   :long-description #.(uiop:read-file-string
-                       (asdf:system-relative-pathname :asdf-linguist "README.md"))
+                       (uiop:subpathname *load-truename* "README.md"))
   :in-order-to ((test-op (load-op asdf-linguist-test))))
