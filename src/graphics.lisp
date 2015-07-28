@@ -3,7 +3,7 @@
 (define-shell-component ditaa
   :input-type "ditaa"
   :output-type "png"
-  :command-format "ditaa ~A ~A")
+  :shell-command "ditaa")
 
 (defclass dot (source-file)
   ((type :initform "dot")

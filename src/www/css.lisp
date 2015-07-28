@@ -5,23 +5,23 @@
 (define-shell-component less
   :input-type "less"
   :output-type "css"
-  :command-format "lessc ~A ~A")
+  :shell-command "lessc")
 
 ;;; Sass
 
 (define-shell-component sass
   :input-type "scss"
   :output-type "css"
-  :command-format "sass ~A ~A")
+  :shell-command "sass")
 
 (define-shell-component sass-strict
   :input-type "sass"
   :output-type "css"
-  :command-format "sass ~A ~A")
+  :shell-command "sass")
 
 ;;; Myth
 
 (define-shell-component myth
   :input-type "myth"
   :output-type "css"
-  :command-format "myth ~A ~A")
+  :shell-command "myth")
