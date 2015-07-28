@@ -1,6 +1,7 @@
 (defsystem asdf-linguist
   :version "0.1"
-  :author "Fernando Borretti <eudoxiahp@gmail.com>"
+  :author "Fernando Borretti"
+  :mailto "eudoxiahp@gmail.com"
   :license "MIT"
   :depends-on (:asdf
                :inferior-shell
