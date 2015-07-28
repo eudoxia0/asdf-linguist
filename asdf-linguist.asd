@@ -3,6 +3,7 @@
   :author "Fernando Borretti <eudoxiahp@gmail.com>"
   :license "MIT"
   :depends-on (:asdf
+               :inferior-shell
                :parenscript)
   :components ((:module "src"
                 :serial t

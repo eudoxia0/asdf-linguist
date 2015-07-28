@@ -14,6 +14,11 @@
   :output-type "css"
   :command-format "sass ~A ~A")
 
+(define-shell-component sass-strict
+  :input-type "sass"
+  :output-type "css"
+  :command-format "sass ~A ~A")
+
 ;;; Myth
 
 (define-shell-component myth
