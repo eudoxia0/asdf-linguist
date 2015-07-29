@@ -16,6 +16,7 @@
                         "-o"
                         (namestring (output-pathname component))
                         ;;,@(loop for l in (link component) collect (list "-l" l))
-                        (link component))))
+                        (link component))
+                      :show t))
 
 (import 'c->bin :asdf)

@@ -9,4 +9,5 @@
   :input-type "dot"
   :output-type "png"
   :compile-function (lambda (input-pathname output-pathname)
-                      (inferior-shell:run `("dot" "-Tpng" ,input-pathname "-o" ,output-pathname))))
+                      (inferior-shell:run `("dot" "-Tpng" ,input-pathname "-o" ,output-pathname)
+                                          :show t)))

@@ -7,7 +7,8 @@
   :output-type "min.css"
   :compile-function (lambda (input-pathname output-pathname)
                       (inferior-shell:run
-                       `("yui-compressor" ,input-pathname "-o" ,output-pathname))))
+                       `("yui-compressor" ,input-pathname "-o" ,output-pathname)
+                       :show t)))
 
 ;;; YUI JS compressor
 
@@ -16,4 +17,5 @@
   :output-type "min.js"
   :compile-function (lambda (input-pathname output-pathname)
                       (inferior-shell:run
-                       `("yui-compressor" ,input-pathname "-o" ,output-pathname))))
+                       `("yui-compressor" ,input-pathname "-o" ,output-pathname)
+                       :show t)))
