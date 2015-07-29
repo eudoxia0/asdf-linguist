@@ -2,12 +2,6 @@
   (:use :cl :asdf))
 (in-package :asdf-linguist)
 
-#+nil
-(defun run-command (format-string &rest args)
-  (let ((out (apply #'format (cons nil (cons format-string args)))))
-    (print out)
-    (run-shell-command out)))
-
 (defun output-pathname (component &optional output-type
                                     (name (pathname-name (component-pathname component))))
   (make-pathname
