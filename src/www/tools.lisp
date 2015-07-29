@@ -2,14 +2,18 @@
 
 ;;; YUI CSS compressor
 
-(define-shell-component css-minify
+(define-component css-minify
   :input-type "css"
   :output-type "min.css"
-  :command-format "yui-compressor ~A -o ~A")
+  :compile-function (lambda (input-pathname output-pathname)
+                      (inferior-shell:run
+                       `("yui-compressor" ,input-pathname "-o" ,output-pathname))))
 
 ;;; YUI JS compressor
 
-(define-shell-component js-minify
+(define-component js-minify
   :input-type "js"
   :output-type "min.js"
-  :command-format "yui-compressor ~A -o ~A")
+  :compile-function (lambda (input-pathname output-pathname)
+                      (inferior-shell:run
+                       `("yui-compressor" ,input-pathname "-o" ,output-pathname))))

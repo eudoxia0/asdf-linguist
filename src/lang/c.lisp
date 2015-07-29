@@ -8,14 +8,14 @@
 (defmethod perform ((o load-op) (component c->bin)) t)
 
 (defmethod output-files ((operation compile-op) (component c->bin))
-  (values
-   (list
-    (output-pathname component))))
+  (list (output-pathname component)))
 
 (defmethod perform ((o compile-op) (component c->bin))
-  (run-command "cc ~A -o ~A ~{-l~A~}"
-               (namestring (component-pathname component))
-               (namestring (output-pathname component))
-               (link component)))
+  (inferior-shell:run `("cc"
+                        ,(namestring (component-pathname component))
+                        "-o"
+                        (namestring (output-pathname component))
+                        ;;,@(loop for l in (link component) collect (list "-l" l))
+                        (link component))))
 
 (import 'c->bin :asdf)
