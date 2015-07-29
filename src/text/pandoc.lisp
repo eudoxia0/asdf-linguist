@@ -8,21 +8,21 @@
    (output-extension :initarg :output-extension :reader output-extension)
    (options :initarg :options :reader options :initform "")))
 
-(defmethod perform ((o load-op) (component pandoc)) nil)
+(defmethod perform ((o load-op) (component pandoc)) t)
 
 (defmethod output-files ((operation compile-op) (component pandoc))
-  (list
-   (output-pathname component (output-extension component))))
+  (list (output-pathname component (output-extension component))))
 
 (defmethod perform ((o compile-op) (component pandoc))
-  (run-command "pandoc ~A -f ~A -o ~A ~A ~A"
-               (if (output-type component)
-                   (concatenate 'string "-t " (output-type component))
-                   "")
-               (input-format component)
-               (namestring (output-pathname component
-                                            (output-extension component)))
-               (namestring (component-pathname component))
-               (options component)))
+  (inferior-shell:run
+   `("pandoc" ,@(if (output-type component)
+                    `("-t" ,(output-type component)))
+               "-f"
+               ,(input-format component)
+               "-o"
+               ,(namestring (output-pathname component (output-extension component)))
+               ,(namestring (component-pathname component))
+               ,(options component))
+   :show t))
 
 (import 'pandoc :asdf)

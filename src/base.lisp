@@ -29,13 +29,16 @@
 
      (import ',name :asdf)))
 
+(defun ensure-list (obj)
+  (if (listp obj) obj (list obj)))
+
 (defmacro define-shell-component (name &key input-type output-type shell-command)
   "Define an ASDF component that's compiled by running a shell command."
   `(define-component ,name
      :input-type ,input-type
      :output-type ,output-type
      :compile-function (lambda (input-pathname output-pathname)
-                         (inferior-shell:run (list ,shell-command
+                         (inferior-shell:run (list ,@(ensure-list shell-command)
                                                     input-pathname
                                                     output-pathname)
                                              :show t))))

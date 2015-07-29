@@ -1,5 +1,6 @@
 (defsystem asdf-linguist-test
-  :author "Fernando Borretti <eudoxiahp@gmail.com>"
+  :author "Fernando Borretti"
+  :mailto "eudoxiahp@gmail.com"
   :license "MIT"
   :defsystem-depends-on (:asdf-linguist)
   :components ((:module "t"
