@@ -2,10 +2,13 @@
 
 ;;; CoffeeScript
 
-(define-shell-component coffee
+(define-component coffee
   :input-type "coffee"
   :output-type "js"
-  :shell-command ("coffee" "-c"))
+  :compile-function (lambda (input-pathname output-pathname)
+                      (declare (ignore output-pathname))
+                      (inferior-shell:run `("coffee" "-c" ,input-pathname)
+                                          :show t)))
 
 ;;; Roy
 
